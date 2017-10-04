@@ -16,5 +16,13 @@ describe("Parser", function () {
         it("doesn't recognise nothing", function () {
             expect(parser.parse("")[1]).to.be.false;
         });
+
+        it("recognises ¬q", function () {
+            expect(parser.parse("¬q")[1]).to.be.true;
+        });
+
+        it("recognises q ∨ p", function () {
+            expect(parser.parse("q ∨ p")[1]).to.be.true;
+        });
     });
 });
