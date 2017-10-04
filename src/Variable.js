@@ -6,7 +6,13 @@ Variable.prototype = {
 
     // Variable ~> Context -> Boolean
     interpret: function (context) {
-        return context[this.identifier];
+        var value = context[this.identifier];
+
+        if (typeof value !== "boolean") {
+            throw new SyntaxError("Not a boolean");
+        }
+
+        return value;
     }
     
 };
