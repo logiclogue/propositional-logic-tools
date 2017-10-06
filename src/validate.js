@@ -21,7 +21,7 @@ function variable(input) {
 }
 
 function not(input) {
-    var notSymbol = "¬";
+    var notSymbol = '¬';
     var isNot = input.includes(notSymbol);
     var withoutNot = input.replace(notSymbol, "");
 
