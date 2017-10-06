@@ -1,3 +1,4 @@
+// String -> Boolean
 function validate(input) {
     return expression(input);
 }
