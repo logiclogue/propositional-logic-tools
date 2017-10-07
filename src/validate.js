@@ -1,3 +1,7 @@
+var Variable = require("./Variable");
+
+var variable = new Variable().validate;
+
 // String -> Boolean
 function validate(input) {
     return expression(input);
@@ -10,15 +14,6 @@ function expression(input) {
         not(trimmedInput) ||
         binary(trimmedInput) ||
         variable(trimmedInput);
-}
-
-function variable(input) {
-    var isP = input === 'p';
-    var isQ = input === 'q';
-    var isR = input === 'r';
-    var isS = input === 's';
-
-    return isP || isQ || isR || isS;
 }
 
 function not(input) {
