@@ -13,6 +13,8 @@ describe("Expression", function () {
     });
 
     describe("#validate", function () {
-
+        it("recognises q", function () {
+            expect(expression.validate("q")).to.be.true;
+        });
     });
 });

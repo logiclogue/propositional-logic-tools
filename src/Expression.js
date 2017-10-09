@@ -1,5 +1,7 @@
+var Variable = require("./Variable");
+
 function Expression() {
-    
+    this.variable = new Variable();
 }
 
 Expression.prototype = {
@@ -11,7 +13,7 @@ Expression.prototype = {
 
     // Expression ~> String -> Boolean
     validate: function (input) {
-        $
+        return this.variable.validate(input);
     }
     
 };
